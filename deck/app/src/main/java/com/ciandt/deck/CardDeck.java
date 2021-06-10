@@ -17,7 +17,10 @@ public class CardDeck {
     }
 
     private static Stream<PlayingCard> getSuits(int value) {
-        return orderedSuits.stream().map(s -> new PlayingCard(value, s));
+        return orderedSuits.stream().map(
+                s -> new PlayingCard(value, s)
+        );
+
     }
 
     public static List<PlayingCard> getDeck() {

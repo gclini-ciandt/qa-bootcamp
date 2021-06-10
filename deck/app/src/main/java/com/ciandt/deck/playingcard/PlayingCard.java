@@ -54,11 +54,14 @@ public class PlayingCard implements Comparable {
         if (o == null || !o.getClass().isAssignableFrom(PlayingCard.class)) {
             return -1;
         }
-
         int cardComparator = Integer.compare(value, ((PlayingCard) o).value);
+
         if (cardComparator != 0) {
             if (value == 1) {
                 return 1;
+            }
+            if (((PlayingCard) o).value == 1) { //correção bug
+                     return -1;
             }
             return cardComparator;
         }

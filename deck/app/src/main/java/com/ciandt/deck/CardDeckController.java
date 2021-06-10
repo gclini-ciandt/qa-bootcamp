@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class CardDeckController {
     @GetMapping("/")
     public List<PlayingCard> getGreeting() {
+
         return CardDeck.getDeck();
+
     }
 }
